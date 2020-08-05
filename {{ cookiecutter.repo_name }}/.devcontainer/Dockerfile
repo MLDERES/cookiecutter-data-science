@@ -22,7 +22,11 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     #
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
-    && apt-get -y install git openssh-client less iproute2 procps iproute2 lsb-release \
+    && apt-get -y install git openssh-client less iproute2 \
+      procps \
+      iproute2 \
+      lsb-release \
+      make \
     #
     # Install pylint
     && /opt/conda/bin/pip install pylint \
@@ -169,11 +173,5 @@ COPY .devcontainer/start-fluxbox.sh .devcontainer/start-vnc.sh /opt/bin/
 # Supervisor configuration file
 #==============================
 COPY .devcontainer/selenium-debug.conf /etc/supervisor/conf.d/
-
-USER root
-
-COPY requirements.txt /tmp/pip-tmp/
-RUN pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-   && rm -rf /tmp/pip-tmp
 
 EXPOSE 5900
