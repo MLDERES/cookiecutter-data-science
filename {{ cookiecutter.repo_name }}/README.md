@@ -9,6 +9,8 @@ Project Organization
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
+    ├── .devcontainer      <- All the required files for creating a Docker image,
+    │                         for developing in VS Code
     ├── data
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.

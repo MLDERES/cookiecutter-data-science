@@ -1,6 +1,8 @@
 # Cookiecutter Data Science
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
+Quite similar to the structure developed with the data-science cookiecutter, with the addition of Selenium
+and Chromium for improved data scraping.
 
 
 #### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
@@ -8,7 +10,7 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 
 ### Requirements to use the cookiecutter template:
 -----------
- - Python 2.7 or 3.5
+ - Python 3.5
  - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
 
 ``` bash
@@ -26,7 +28,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter https://github.com/mlderes/cookiecutter-data-selenium
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
@@ -41,6 +43,8 @@ The directory structure of your new project looks like this:
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
+├── .devcontainer      <- All the required files for creating a Docker image,
+│                         for developing in VS Code
 ├── data
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
@@ -82,6 +86,10 @@ The directory structure of your new project looks like this:
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
+
+## Special Thanks
+This cookiecookie was inspired by the great work previously developed 
+
 
 ## Contributing
 
